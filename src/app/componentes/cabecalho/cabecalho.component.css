@@ -1,0 +1,14 @@
+.cabecalho {
+  background-size: cover;
+  background-color:#154580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 2em;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">Usuários</h2>
+    <button routerLink="/cadastrarUsuario" class="botao ff-inter">Cadastrar Usuário</button>
+  </header>
+  <div class="usuarios" *ngIf="listaUsuarios.length > 0, else semUsuarios">
+    <div *ngFor="let usuario of listaUsuarios" class="ff-inter borda">
+      <app-usuario [usuario]="usuario" routerLink="/usuario/visualizarUsuario/{{usuario.id}}" class="pointer"></app-usuario>
+    </div>
+  </div>
+</section>
+<ng-template #semUsuarios>
+  <div class="ff-inter">
+    <p>Ainda não há usuários cadastrados!</p>
+  </div>
+</ng-template>

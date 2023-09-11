@@ -1,0 +1,8 @@
+<div class="usuario ff-roboto-mono flex">
+  <p class="conteudo">{{ usuario.nome }}</p>
+  <p class="conteudo">{{ usuario.email }}</p>
+  <div class="acoes">
+    <button class="botao botao-editar" routerLink="/usuario/editarUsuario/{{usuario.id}}">Editar</button>
+    <button class="botao botao-excluir" routerLink="/usuario/excluirUsuario/{{usuario.id}}">Excluir</button>
+  </div>
+</div>

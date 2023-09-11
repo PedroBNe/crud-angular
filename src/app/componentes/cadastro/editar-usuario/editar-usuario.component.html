@@ -1,0 +1,26 @@
+<section class="container editar-usuario ff-inter">
+  <header class="header">
+    <h2>Cadastrar Usuario</h2>
+    <form>
+      <Label for="nome">Nome: </Label>
+      <input type="text" class="input" id="nome" name="nome" placeholder="Digite seu nome" [(ngModel)]="usuario.nome">
+
+      <Label for="sobrenome">Sobrenome: </Label>
+      <input type="text" class="input" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" [(ngModel)]="usuario.sobrenome">
+
+      <Label for="email">E-mail: </Label>
+      <input type="email" class="input" id="email" name="email" placeholder="Digite seu email" [(ngModel)]="usuario.email">
+
+      <Label for="profissao">Profissão: </Label>
+      <input type="text" class="input" id="profissao" name="profissao" placeholder="Digite sua profissão" [(ngModel)]="usuario.profissao">
+
+      <Label for="idade">Idade: </Label>
+      <input type="number" class="input" id="idade" name="idade" placeholder="Digite sua idade" [(ngModel)]="usuario.idade ">
+
+      <div>
+        <button (click)="editarUsuario()" class="botao">Salvar</button>
+        <button (click)="cancelar()" class="botao">Cancelar</button>
+      </div>
+    </form>
+  </header>
+</section>

@@ -1,0 +1,11 @@
+.fixarRodape {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color:#154580;
+  font-size: 20px;
+  padding: 6px;
+  color: white;
+}
+

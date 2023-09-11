@@ -1,0 +1,12 @@
+{
+  "usuarios": [
+    {
+      "nome": "Pedro",
+      "sobrenome": "Barreto",
+      "email": "pedro@gmail.com",
+      "profissao": "dev",
+      "idade": 19,
+      "id": 1
+    }
+  ]
+}

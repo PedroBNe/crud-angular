@@ -1,27 +1,55 @@
-# Cadastro
+# Gerenciamento de Usuários - CRUD com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Este projeto oferece uma solução para o gerenciamento de usuários por meio das operações básicas de CRUD (Create, Read, Update, Delete). Ele foi desenvolvido usando Angular e utiliza uma API JSON-Server simulada como backend.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, verifique se você possui a seguinte ferramenta instalada em sua máquina:
 
-## Code scaffolding
+- Node.js
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Clonar o Projeto
 
-## Build
+Para começar, você deve clonar este repositório em sua máquina local. Abra o terminal e execute o seguinte comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git clone https://github.com/PedroBNe/crud-angular.git
+```
+Depois de clonar o repositório, acesse a pasta do projeto:
+```bash
+cd crud-angular
+```
+Executando a Aplicação
+API JSON-Server
+Primeiro, acesse a pasta da API:
 
-## Running unit tests
+```bash
+cd api
+```
+Instale as dependências da API:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+```
+Inicie o servidor JSON-Server:
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Agora, abra um novo terminal e acesse o diretório da aplicação Angular:
 
-## Further help
+```bash
+cd crud-angular
+```
+Instale as dependências da aplicação Angular:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install
+```
+Inicie a aplicação:
+
+```bash
+npm start
+```
+A aplicação estará disponível em http://localhost:4200 por padrão.

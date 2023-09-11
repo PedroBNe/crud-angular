@@ -1,0 +1,17 @@
+main h2 {
+  display: flex;
+  width: 40%;
+  border: solid 1.5px #154580;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 15px;
+}
+
+.info h2 {
+  padding: 20px;
+  font-size: 50px;
+  margin: 10px;
+  font-weight: bold;
+}
