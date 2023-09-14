@@ -28,3 +28,16 @@ div {
   width: 10%;
   height: 60px;
 }
+
+form div .mensagem__erro {
+  font-size: 14px;
+  margin-left: 5px;
+  color: red;
+  margin: 0px;
+}
+
+.botao__desabilitado {
+  margin: 0px;
+  width: 10%;
+  height: 60px;
+}

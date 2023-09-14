@@ -5,4 +5,5 @@ export interface Usuario {
   email: string
   profissao: string
   idade: number
+  favorito: boolean
 }

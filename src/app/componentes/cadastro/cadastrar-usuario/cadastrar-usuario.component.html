@@ -1,30 +1,35 @@
 <section class="container ff-inter">
   <header class="header">
     <h2>Cadastrar Usuario</h2>
-    <form class="ff-inter">
+    <form class="ff-inter" [formGroup]="formulario">
       <div>
         <Label for="nome">Nome: </Label>
-        <input type="text" class="input" id="nome" name="nome" placeholder="Digite seu nome" [(ngModel)]="usuario.nome">
+        <input type="text" class="input" id="nome" formControlName="nome" placeholder="Digite seu nome">
+        <div class="mensagem__erro" *ngIf="formulario.get('nome')?.errors && formulario.get('nome')?.touched">Nome é obrigatório!</div>
       </div>
         <div class="div">
           <Label for="sobrenome">Sobrenome: </Label>
-          <input type="text" class="input" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" [(ngModel)]="usuario.sobrenome">
+          <input type="text" class="input" id="sobrenome" formControlName="sobrenome" placeholder="Digite seu sobrenome">
+          <div class="mensagem__erro" *ngIf="formulario.get('sobrenome')?.errors && formulario.get('sobrenome')?.touched">Sobrenome é obrigatório!</div>
         </div>
         <div class="div">
           <Label for="email">E-mail: </Label>
-          <input type="email" class="input" id="email" name="email" placeholder="Digite seu email" [(ngModel)]="usuario.email">
+          <input type="email" class="input" id="email" formControlName="email" placeholder="Digite seu email">
+          <div class="mensagem__erro" *ngIf="formulario.get('email')?.errors && formulario.get('email')?.touched">Email é obrigatório!</div>
         </div>
         <div class="div">
           <Label for="profissao">Profissão: </Label>
-          <input type="text" class="input" id="profissao" name="profissao" placeholder="Digite sua profissão" [(ngModel)]="usuario.profissao">
+          <input type="text" class="input" id="profissao" formControlName="profissao" placeholder="Digite sua profissão">
+          <div class="mensagem__erro" *ngIf="formulario.get('profissao')?.errors && formulario.get('profissao')?.touched">Profissão é obrigatório!</div>
         </div>
         <div class="div">
           <Label for="idade">Idade: </Label>
-          <input type="number" class="input" id="idade" name="idade" placeholder="Digite sua idade" [(ngModel)]="usuario.idade ">
+          <input type="number" class="input" id="idade" formControlName="idade" placeholder="Digite sua idade">
+          <div class="mensagem__erro" *ngIf="formulario.get('idade')?.errors && formulario.get('idade')?.touched">Idade é obrigatório!</div>
       </div>
 
       <div class="dire">
-        <button (click)="cadastrarUsuario()" class="botao">Salvar</button>
+        <button [disabled]="!formulario.valid" (click)="cadastrarUsuario()" [ngClass]="habilitarBotao()">Salvar</button>
         <button (click)="cancelar()" class="botao">Cancelar</button>
       </div>
     </form>

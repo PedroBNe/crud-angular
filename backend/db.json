@@ -1,12 +1,31 @@
 {
   "usuarios": [
     {
+      "id": 1,
       "nome": "Pedro",
       "sobrenome": "Barreto",
       "email": "pedro@gmail.com",
       "profissao": "dev",
       "idade": 19,
-      "id": 1
+      "favorito": true
+    },
+    {
+      "nome": "teste",
+      "sobrenome": "tester",
+      "email": "teste@TESTE",
+      "profissao": "testador",
+      "idade": 556,
+      "favorito": false,
+      "id": 2
+    },
+    {
+      "nome": "terceiro",
+      "sobrenome": "teres",
+      "email": "tere3@das",
+      "profissao": "numero",
+      "idade": 3,
+      "favorito": false,
+      "id": 3
     }
   ]
 }

@@ -16,7 +16,8 @@ export class ExcluirUsuarioComponent {
     sobrenome: "",
     email: "",
     profissao: "",
-    idade: 1
+    idade: 1,
+    favorito: false
   }
 
   constructor(

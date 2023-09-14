@@ -1,7 +1,10 @@
 <div class="usuario ff-roboto-mono flex">
-  <p class="conteudo">{{ usuario.nome }}</p>
-  <p class="conteudo">{{ usuario.email }}</p>
+  <p class="conteudo" routerLink="/usuario/visualizarUsuario/{{usuario.id}}">{{ usuario.nome }}</p>
+  <p class="conteudo" routerLink="/usuario/visualizarUsuario/{{usuario.id}}" >{{ usuario.email }}</p>
   <div class="acoes">
+    <button class="botao-favorito" (click)="atualizarFavoritos()" >
+      <img src="/assets/imagens/icone-favorito-{{ mudarIconeFavorito() }}.png" alt="">
+    </button>
     <button class="botao botao-editar" routerLink="/usuario/editarUsuario/{{usuario.id}}">Editar</button>
     <button class="botao botao-excluir" routerLink="/usuario/excluirUsuario/{{usuario.id}}">Excluir</button>
   </div>

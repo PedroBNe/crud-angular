@@ -15,7 +15,8 @@ export class VisualizarUsuarioComponent {
     sobrenome: '',
     email: '',
     profissao: '',
-    idade: 0
+    idade: 0,
+    favorito: false
   }
 
   constructor(

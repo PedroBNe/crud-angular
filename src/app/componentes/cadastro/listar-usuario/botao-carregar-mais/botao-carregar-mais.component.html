@@ -1,0 +1,6 @@
+<div class="center" *ngIf="haMaisUsuarios; else semMaisUsuarios">
+  <button class="botao carregar-mais">Carregar mais</button>
+</div>
+<ng-template #semMaisUsuarios>
+  <p class="mensagem-center ff-inter">Não há mais usuários para exibir</p>
+</ng-template>

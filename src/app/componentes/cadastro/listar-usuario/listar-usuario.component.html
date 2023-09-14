@@ -1,14 +1,29 @@
 <section class="container">
-  <header class="header d-flex">
-    <h2 class="ff-inter">Usuários</h2>
-    <button routerLink="/cadastrarUsuario" class="botao ff-inter">Cadastrar Usuário</button>
+  <header class="header">
+    <h2 class="ff-inter"> {{ titulo }}</h2>
+    <div class="botoes">
+      <button class="botao" (click)="recarregarComponente()">Usuários</button>
+      <button class="botao" (click)="listarFavoritos()">Favoritados</button>
+      <button routerLink="/cadastrarUsuario" class="botao ff-inter">Cadastrar Usuário</button>
+    </div>
+    <div class="buscar-usuarios">
+      <input type="search" class="filtro" placeholder="Pesquisar Usuário" autofocus [(ngModel)]="filtro" (keyup)="pesquisarUsuarios()">
+      <img src="/assets/imagens/lupa.png" alt="Lupa">
+    </div>
   </header>
   <div class="usuarios" *ngIf="listaUsuarios.length > 0, else semUsuarios">
     <div *ngFor="let usuario of listaUsuarios" class="ff-inter borda">
-      <app-usuario [usuario]="usuario" routerLink="/usuario/visualizarUsuario/{{usuario.id}}" class="pointer"></app-usuario>
+      <app-usuario
+        [usuario]="usuario"
+        [listafavoritos]="listaFavoritos"
+        class="pointer"></app-usuario>
     </div>
   </div>
 </section>
+<app-botao-carregar-mais
+  [haMaisUsuarios]="haMaisUsuarios"
+  (click)="carregarMaisUsuarios()">
+</app-botao-carregar-mais>
 <ng-template #semUsuarios>
   <div class="ff-inter">
     <p>Ainda não há usuários cadastrados!</p>
